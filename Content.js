@@ -16,6 +16,7 @@ const numbers = genereateArrays(48, 57);
 const uppercase = genereateArrays(65, 90);
 
 const lowercase = genereateArrays(97, 122);
+let tooltip = document.getElementById("tooltiptext");
 
 let generateBtn = document.getElementById("generateBtn");
 let genereatePassword = document.getElementById("password");
@@ -49,6 +50,11 @@ generateBtn.addEventListener("click", generate);
 genereatePassword.addEventListener("click", () => {
   navigator.clipboard
     .writeText(genereatePassword.textContent)
-    .then((msg) => console.log("copied"))
+    .then(() => {
+      tooltip.style.visibility = "visible";
+      setTimeout(() => {
+        tooltip.style.visibility = "hidden";
+      }, 1000);
+    })
     .catch((err) => console.log(err));
 });
