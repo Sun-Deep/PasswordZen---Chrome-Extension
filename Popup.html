@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PasswordZen</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>Password Zen</h2>
+      <label for="passwordLength">
+        Password Length ?
+        <input
+          type="number"
+          name="passwordLength"
+          id="passwordLength"
+          value="8"
+        />
+      </label>
+      <br />
+      <label for="isNumbers">
+        Numbers ?
+        <input type="checkbox" name="isNumbers" id="isNumbers" checked />
+      </label>
+      <br />
+      <label for="isUppercase">
+        Uppercase ?
+        <input type="checkbox" name="isUppercase" id="isUppercase" checked />
+      </label>
+      <br />
+      <label for="isSymbol">
+        Symbols ?
+        <input type="checkbox" name="isSymbol" id="isSymbol" checked />
+      </label>
+      <br />
+      <p id="password"></p>
+      <br />
+      <button type="button" id="generateBtn">Generate</button>
+    </div>
+
+    <script src="Content.js"></script>
+  </body>
+</html>
